@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model UrunListesiViewModel
+<h1>@Model.Mesaj</h1>
+
+<table class="table table-hover">
+    <tr>
+        <th>Ürün No</th>
+        <th>Ürün Adı</th>
+        <th>Birim Fiyatı</th>
+        <th>Stok Düzeyi</th>
+        <th>Kategorisi</th>
+
+
+
+
+
+    </tr>
+
+      @foreach (Urun item in Model.Urunler)
+     {
+           <tr>
+        <th>@item.UrunID</th>
+        <th>@item.UrunAdi</th>
+        <th>@item.BirimFiyati</th>
+        <th>@item.HedefStokDuzeyi</th>
+        <th>@item.Kategori.KategoriAdi</th>
+
+
+
+
+
+    </tr>
+         
+     }
+
+</table>
